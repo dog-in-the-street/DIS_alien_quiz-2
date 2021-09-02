@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if total_score < 20 %}
+        {{total_score}}
+        돌!
+    {% elif total_score < 40 %}
+        {{total_score}}
+        2등급!
+    {% elif total_score < 60 %}
+        {{total_score}}
+        3등급!
+    {% elif total_score < 80 %}
+        {{total_score}}
+        4등급
+    {% elif total_score < 100 %}
+        {{total_score}}
+        5등급
+    {% endif %}
+</body>
+</html>
