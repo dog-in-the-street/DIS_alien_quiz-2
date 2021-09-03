@@ -25,11 +25,8 @@ def result(request):
     global total_score
     if request.method == "POST":
         selected = request.POST.getlist('selected[]')
-        print(selected)
         selected = [ int(i) for i in selected ]
         total_score = sum(selected)
-        print('hi')
-        print(total_score)
     return render(request,'result.html', {"total_score":total_score})
 
 
