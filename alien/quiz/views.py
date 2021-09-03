@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import *
+from .models import Question
 
 # 점수 총합에 해당하는 전역 변수
 total_score = 0
@@ -10,25 +10,28 @@ def index(request):
 def quiz(request):
     questions = Question.objects.all() # 모델 전체를 가져옴.
     global total_score # 점수 총합
+
     
     return render(request, 'quiz.html', {"questions":questions, "total_score":total_score})
 
-def checkbox_submit(request):
-    if request.method == "POST":
-        selected = request.POST.getlist('selected')
+# def checkbox_submit(request):
+#     if request.method == "POST":
+#         selected = request.POST.getlist('selected')
 
-    return render
+#     return render(reques)
 
 
 def result(request):
     global total_score
     if request.method == "POST":
-        selected = request.POST.getlist('selected')
+        selected = request.POST.getlist('selected[]')
+        print(selected)
         selected = [ int(i) for i in selected ]
         total_score = sum(selected)
+        print('hi')
         print(total_score)
-
     return render(request,'result.html', {"total_score":total_score})
+
 
 
 # 재형이가 처음에 짠 점수계산 코드
