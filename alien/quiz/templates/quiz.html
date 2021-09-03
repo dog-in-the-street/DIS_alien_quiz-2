@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- 반복문으로 질문과 선택지 나열 
+        해당 선택지를 누르면 링크에서 선택지에 해당하는 점수를 views로 넘겨줌.-->
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for question in questions %}
+            <div style="margin-bottom: 30px;">
+                <div>{{ question.question }}</div>
+                <input type="checkbox" name='selected[]' value="{{ question.score1 }}">{{ question.option1 }}<br>
+                <input type="checkbox" name='selected[]' value="{{ question.score2 }}">{{ question.option2 }}<br>
+                <input type="checkbox" name='selected[]' value="{{ question.score3 }}">{{ question.option3 }}<br>
+                <input type="checkbox" name='selected[]' value="{{ question.score4 }}">{{ question.option4 }}
+            </div>
+
+            <!-- 이전, 다음 버튼 생성 -->
+            <div>
+            {% if question.id == 1 %}
+            <button>다 음</button><br><br><br>
+            {% elif question.id < 10 %}
+            <button>이 전</button>
+            <button>다 음</button><br><br><br>
+            {% else %}
+            <button>이 전</button>
+            <button type="submit"><a href="{% url 'result' %}">제 출</a></button><br><br>
+            {% endif %}
+            </div>
+
+            {% endfor %}
+
+        </form>
+    </div>
+</body>
+</html>
