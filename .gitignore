@@ -1,6 +1,6 @@
 __pycache__
 media/
-venv/
+myvenv/
 migrations
 secrets.json
 db.sqlite3
