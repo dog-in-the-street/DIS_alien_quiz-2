@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,5 +25,7 @@
         {{total_score}}
         5등급
     {% endif %}
+
+    <button><a href="{% url 'index' %}">다시하기!</a></button>
 </body>
 </html>

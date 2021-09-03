@@ -22,7 +22,10 @@ from quiz import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('addScore/<int:score>', views.addScore, name='addScore'),
+    path('quiz', views.quiz, name='quiz'),
     path('result/', views.result, name='result'),
+
+    # 재형's 기존 코드
+    # path('addScore/<int:score>', views.addScore, name='addScore'),
 
 ]

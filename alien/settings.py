@@ -23,6 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 #SECRET_KEY
 import os, json
+from django.core.exceptions import ImproperlyConfigured
 
 secret_file = os.path.join(BASE_DIR, 'secrets.json') # secrets.json 파일 위치를 명시
 
