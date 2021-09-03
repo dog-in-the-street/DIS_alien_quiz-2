@@ -7,9 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}" />
 </head>
 <body>
-    <button><a href="{% url 'quiz' %}">시작하기!</a></button>
+    <div class="intro-container">
+        <div class="intro-text">
+        <p>외계인이 알려주는</p>
+        <p>나의 전생</p>
+    </div>
+    <div class="intro-image">
+        <img src="../static/image/인트로 외계인.png"  title="외계인 이미지" alt="외계인 이미지" />
+    </div>
+    <div class="quiz-btn">
+        <button><a href="{% url 'quiz' %}">알아보기</a></button>
+        
+    </div>
+    </div>
     
 </body>
 </html>

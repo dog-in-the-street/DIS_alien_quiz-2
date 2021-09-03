@@ -1,0 +1,25 @@
+/* 초기화 코드 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.quiz-form {
+  width: 100%;
+  overflow: hidden;
+  font-size: 1.6rem;
+  display: flex;
+}
+
+.quiz-contents {
+  width: 100vw;
+
+  min-width: 320px;
+}
