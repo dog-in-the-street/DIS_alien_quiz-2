@@ -7,40 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/quiz.css'%}" />
 </head>
 <body>
-    <div>
+    <div class="quiz-container">
         <!-- 반복문으로 질문과 선택지 나열 
         해당 선택지를 누르면 링크에서 선택지에 해당하는 점수를 views로 넘겨줌.-->
 
-        <form action="{% url 'result' %}" method="POST">
+        <form action="{% url 'result' %}" method="POST" class="quiz-form">
             {% csrf_token %}
             {% for question in questions %}
-            <div style="margin-bottom: 30px;">
-                <div>{{ question.question }}</div>
+            <div class="quiz-contents">
+                <div class="question-title">{{ question.question }}</div>
                 <input type="checkbox" id="selected" name='selected[]' value="{{ question.score1 }}" >{{ question.option1 }}<br>
                 <input type="checkbox" id="selected" name='selected[]' value="{{ question.score2 }}" >{{ question.option2 }}<br>
                 <input type="checkbox" id="selected" name='selected[]' value="{{ question.score3 }}" >{{ question.option3 }}<br>
                 <input type="checkbox" id="selected" name='selected[]' value="{{ question.score4 }}" >{{ question.option4 }}
-            </div>
-
-            <!-- 이전, 다음 버튼 생성 -->
+                  <!-- 이전, 다음 버튼 생성 -->
             <div>
-            {% if question.id == 1 %}
-            <button>다 음</button><br><br><br>
-            {% elif question.id < 10 %}
-            <button>이 전</button>
-            <button>다 음</button><br><br><br>
-            {% else %}
-            <button>이 전</button>
-            <a href="{% url 'result' %}"><input type="submit" value="Submit"></a><br><br>
-            {% endif %}
+                {% if question.id == 1 %}
+                <button>다 음</button><br><br><br>
+                {% elif question.id < 10 %}
+                <button>이 전</button>
+                <button>다 음</button><br><br><br>
+                {% else %}
+                <button>이 전</button>
+                <a href="{% url 'result' %}"><input type="submit" value="Submit"></a><br><br>
+                {% endif %}
+              
             </div>
 
-            
+          
+
+        </div>
             {% endfor %}
 
         </form>
+        <script src="../static/js/quiz.js"></script>
     </div>
 </body>
 </html>
