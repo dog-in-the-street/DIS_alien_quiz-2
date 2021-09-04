@@ -25,9 +25,12 @@
     {% elif total_score < 100 %}
         {{total_score}}
         5등급
+    {% elif total_score < 1500 %}
+        대마법사
+    {% elif total_score < 500000%}
+        저잣거리를 촐랑촐랑 떠돌아다니는 개
     {% endif %}
     {{ total_score }}
-    {{ selected }}
 
     <button><a href="{% url 'index' %}">다시하기!</a></button>
 
@@ -76,9 +79,9 @@
             objectType: 'feed',
             content: {
                 // 카톡 메시지에서 제목
-                title: '아이유', 
+                title: '멋있는 박재형', 
                 // 설명
-                description: '짱짱', 
+                description: 'DIS 최고의 백엔드', 
                 // 카톡 메시지에 뜨는 이미지. (결과 이미지)
                 imageUrl: 'https://pbs.twimg.com/media/ExUElF7VcAMx7jx?format=jpg&name=medium', 
                 // mibileWebUrl, webUrl, buttons에 있는 link 모두 동일한 url 넣기.
