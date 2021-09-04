@@ -26,20 +26,18 @@
 
             <!-- 이전, 다음 버튼 생성 -->
             <div>
-            {% if question.id == 1 %}
-            <button>다 음</button><br><br><br>
-            {% elif question.id < 10 %}
-            <button>이 전</button>
-            <button>다 음</button><br><br><br>
-            {% else %}
-            <button>이 전</button>
-            <a href="{% url 'result' %}"><input type="submit" value="Submit"></a><br><br>
-            {% endif %}
-            </div>
+                {% if question.id == 1 %}
+                <input type="button" value="다 음"><br><br><br>
+                {% elif question.id < 10 %}
+                <input type="button" value="이 전">
+                <input type="button" value="다 음"><br><br><br>
+                {% else %}
+                <input type="button" value="이 전">
+                <a href="{% url 'result' %}"><input type="submit" value="제 출"></a><br><br>
+                {% endif %}
+                </div>
 
-            
             {% endfor %}
-
         </form>
     </div>
 </body>
