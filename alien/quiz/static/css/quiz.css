@@ -9,17 +9,24 @@ body {
   font-size: 10px;
   list-style: none;
   text-decoration: none;
+  overflow-y: hidden;
 }
 
-.quiz-form {
-  width: 100%;
-  overflow: hidden;
-  font-size: 1.6rem;
-  display: flex;
+input[type="checkbox"] {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+  width: 0;
+  color: transparent;
+  border: 0px transparent solid;
+  padding: 0;
 }
 
 .quiz-contents {
-  width: 100vw;
-
+  font-size: 1.6rem;
   min-width: 320px;
+  height: 100vh;
 }
