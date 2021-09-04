@@ -30,6 +30,11 @@ def result(request):
     return render(request,'result.html', {"total_score":total_score})
 
 
+# 테스트 다시하기
+# def reset(request):
+#     global total_score
+#     total_score = 0 # 점수 0으로 초기화시키기.
+#     return redirect('index') # redirect하는 페이지의 url name을 넣어주기.
 
 # 재형이가 처음에 짠 점수계산 코드
 
