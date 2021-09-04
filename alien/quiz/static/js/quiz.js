@@ -1,43 +1,98 @@
-// paging 공사중 
+// const vheight = document.getElementsByClassName("quiz-contents");
+// const nextBtn = document.getElementById("next-btn");
+// const prevBtn = document.getElementById("prev-btn");
+
+var offset = $(".quiz-contents").offset();
+var vheight = $(".quiz-contents").height();
+
+$(".option").click(function () {
+  offset.top += vheight;
+  $("body").animate({ scrollTop: offset.top }, 0);
+});
+
+// $(".result-btn").click(function () {
+//   let divs = $(this).parent().parent().parent().children();
+//   console.log(divs);
+//   let inputs = divs.find("input:checked");
+//   console.log(inputs);
+//   if (inputs.length < 1) {
+//     alert("문항이 선택되지 않았습니다.");
+//     return false;
+//   } else if (inputs.length > 1) {
+//     alert("중복 선택은 불가합니다.");
+//   }
+// });
+
+$(".prev-btn").click(function (e) {
+  e.preventDefault();
+  offset.top -= vheight;
+  console.log(offset.top);
+  $("body").animate({ scrollTop: offset.top }, 0);
+});
 
 
-// function scrollUp(top) {
-   
-//     const margin_top = parseInt($('#survey').css('margin-top'), 10);
-//     $('html, body').animate({
-//         scrollTop: top - vheight - margin_top
-//     }, 500);
-// };
 
-// function scrollDown(top) {
-   
-//     const margin_top = parseInt($('#survey').css('margin-top'), 10);
-//     console.log(top + vheight - margin_top);
-//     $('html, body').animate({
-//         scrollTop: top + vheight - margin_top
-//     }, 500);
+// function scrollUp() {
+//   const vheight = $(".quiz-contents").height();
+//   console.log("h1!!uouo");
+
+//   $("html, body").animate(
+//     {
+//       scrollTop: (Math.floor($(window).scrollTop()) / vheight - 1) * vheight,
+//     },
+//     0
+//   );
 // }
 
+// function scrollDown() {
+//   const vheight = $(".quiz-contents").height();
+//   console.log(vheight);
+//   console.log("h1");
+
+//   $("html, body").animate(
+//     {
+//       scrollTop: (Math.floor($(window).scrollTop()) / vheight + 1) * vheight,
+//     },
+//     0
+//   );
+// }
+
+// nextBtn.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   scrollDown();
+// });
+
+// prevBtn.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   scrollDown();
+// });
+
+// // nextBtn.onclick = function(e){
+// //     e.preventDefault();
+// //     scrollDown();
+// // }
+
+// prevBtn.onclick = function (e) {
+//   e.preventDefault();
+//   scrollUp();
+// };
+
 // $(function () {
-//     $('.next_btn:button').click(function (e) {
-//         let divs = $(this).parent().prev().children();
-//         let parent_top = $(this).parent().parent()[0].offsetTop;
-//         let inputs = divs.find('input:checked');
-//         if (inputs.length < 1) {
-//             alert('문항이 선택되지 않았습니다.');
-//             return false;
-//         }
-//         e.preventDefault();
-//         scrollDown(parent_top);
-//     });
+//   $("#next-btn").click(function (e) {
 
-//     $('.prev_btn:button').click(function (e) {
-//         let parent_top = $(this).parent().parent()[0].offsetTop;
-//         e.preventDefault();
-//         scrollUp(parent_top);
-//     });
+//     e.preventDefault();
+//     scrollDown();
+//   });
 
-//     $("html, body").animate({
-//         scrollTop: 0
-//     }, 500);
+//   $("#prev-btn").click(function (e) {
+//     e.preventDefault();
+//     scrollUp();
+//   });
+
+//   $("html, body").animate(
+//     {
+//       scrollTop: 0,
+//     },
+//    0
+//   );
 // });
