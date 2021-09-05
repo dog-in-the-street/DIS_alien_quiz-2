@@ -35,7 +35,8 @@ body {
   align-items: center;
   height: 100vh;
   max-width: 320px;
-  /* background-image: url("../image/배경\ 이미지.png"); */
+  background-image: url("../image/배경\ 모바일\ 최종.jpg");
+  background-size: 100%;
 }
 
 .intro-text {
@@ -60,29 +61,19 @@ body {
   justify-content: center;
   margin-top: 15%;
   margin-bottom: 30%;
-  position: relative;
+
   z-index: 2;
-}
-
-.background-image img { 
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 320px;
-  height: 667px;
-  z-index: 1;
-
 }
 
 .intro-image img {
   width: 260px;
   height: 300px;
-  position: relative;
   z-index: 2;
 }
 
 .quiz-btn > button {
   font-family: "ghanachoco";
+
   background-color: #fdcf46;
   border-radius: 16px;
   width: 160px;
@@ -99,4 +90,9 @@ body {
   text-decoration: none;
 }
 
-/* git pull setting */
+/* @media (min-width: 1025px) {
+  .intro-container {
+    max-width: 550px;
+    background-size: 720px;
+  }
+} */

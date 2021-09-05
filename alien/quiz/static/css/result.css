@@ -3,38 +3,32 @@
   padding: 0;
 }
 
-.result-page{
-    display: none;
+/* loading-UI */
+.result-page {
+  display: none;
 }
 
 @keyframes spinner-original {
-    to {transform: rotate(360deg);}
+  to {
+    transform: rotate(360deg);
   }
-   
-  .spinner-original:before {
-    content: '';
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    margin-left: -10px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    border-top-color: #333;
-    animation: spinner-original .6s linear infinite;
-  }
+}
 
-.rock {
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  
-}  
-
+.spinner-original:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #333;
+  animation: spinner-original 0.6s linear infinite;
+}
 
 /* progress bar */
 
@@ -49,17 +43,31 @@
 .prog {
   height: 25px;
   width: 500px;
-  background: #C4C4C4;
+  background: #c4c4c4;
   border-radius: 7px;
-
 }
-.progs{
+.progs {
   border-radius: 7px;
   width: 10%;
   height: 25px;
   background: black;
-  color:#fff;
+  color: #fff;
   text-align: center;
   line-height: 25px;
 }
 
+/* result content */
+
+/* .rock {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  
+}   */
+
+.result-container {
+  /* max-width: ; */
+  display: none;
+  width: 80%;
+}
