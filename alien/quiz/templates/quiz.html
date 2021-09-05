@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/quiz.css'%}" />
-   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <body>
     <div class="quiz-container">
+        
         <!-- 반복문으로 질문과 선택지 나열 
         해당 선택지를 누르면 링크에서 선택지에 해당하는 점수를 views로 넘겨줌.-->
 
@@ -20,22 +21,25 @@
             {% if question.id < 10 %}
                 <div class="quiz-contents">
                     <div class="question-title">{{ question.question }}</div>
-                        <label> <div><input class="option" type="checkbox" name='selected[]' value="{{ question.score1 }}"/>{{question.option1 }}</div></label>
-                        <label> <div><input class="option" type="checkbox" name='selected[]' value="{{ question.score2 }}" />{{ question.option2 }}</div></label>
-                        <label> <div><input class="option" type="checkbox" name='selected[]' value="{{ question.score3 }}" />{{ question.option3 }}</div></label>
-                        <label> <div><input class="option" type="checkbox" name='selected[]' value="{{ question.score4 }}" />{{ question.option4 }}</div></label>
-                </div>
+                   
+                        <label> <div class="question-choice"><input class="option" type="checkbox" name='selected[]' value="{{ question.score1 }}"/>{{question.option1 }}</div></label>
+                        <label> <div class="question-choice"><input class="option" type="checkbox" name='selected[]' value="{{ question.score2 }}" />{{ question.option2 }}</div></label>
+                        <label> <div class="question-choice"><input class="option" type="checkbox" name='selected[]' value="{{ question.score3 }}" />{{ question.option3 }}</div></label>
+                        <label> <div class="question-choice"><input class="option" type="checkbox" name='selected[]' value="{{ question.score4 }}" />{{ question.option4 }}</div></label>
+                    
+                    </div>
             {% else %}
                 <div class="quiz-contents">
                   <div class="question-title">{{ question.question }}</div>
-                    <label> <div><input class="option" type="submit" name='selected[]' value="{{ question.score1 }}"/>{{ question.option1 }}</div></label>
-                    <label> <div><input class="option" type="submit" name='selected[]' value="{{ question.score2 }}"/>{{ question.option2 }}</div></label>
-                    <label> <div><input class="option" type="submit" name='selected[]' value="{{ question.score3 }}"/>{{ question.option3 }}</div></label>
-                    <label> <div><input class="option" type="submit" name='selected[]' value="{{ question.score4 }}"/>{{ question.option4 }}</div></label>
+                    <label> <div class="question-choice"><input class="option" type="submit" name='selected[]' value="{{ question.score1 }}"/>{{ question.option1 }}</div></label>
+                    <label> <div class="question-choice"><input class="option" type="submit" name='selected[]' value="{{ question.score2 }}"/>{{ question.option2 }}</div></label>
+                    <label> <div class="question-choice"><input class="option" type="submit" name='selected[]' value="{{ question.score3 }}"/>{{ question.option3 }}</div></label>
+                    <label> <div class="question-choice"><input class="option" type="submit" name='selected[]' value="{{ question.score4 }}"/>{{ question.option4 }}</div></label>
                  </div>
             {% endif %}
       
        {% endfor %}
+    
         </form>
         
         <script src="https://code.jquery.com/jquery-latest.js" ></script>
