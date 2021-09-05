@@ -8,7 +8,7 @@ body {
   font-size: 10px;
   list-style: none;
   text-decoration: none;
-  background:black;
+  background: #f6b1c3;
 }
 
 /* font-family */
@@ -29,7 +29,7 @@ body {
 }
 
 .result-container {
-  background: #B8B7B7;
+  background: #f9e0ed;
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
@@ -50,8 +50,8 @@ body {
 }
 
 .result-image img {
-  width: 250px;
-  height: 170px;
+  width: 200px;
+  height: 200px;
  
 }
 

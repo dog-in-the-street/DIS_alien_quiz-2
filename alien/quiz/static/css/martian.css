@@ -8,7 +8,7 @@ body {
   font-size: 10px;
   list-style: none;
   text-decoration: none;
-  background:black;
+  background: #fcb186;
 }
 
 /* font-family */
@@ -29,7 +29,7 @@ body {
 }
 
 .result-container {
-  background: #B8B7B7;
+  background: #fcece3;
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
@@ -44,32 +44,29 @@ body {
   padding-top: 10%;
 }
 
-.result-image{
+.result-image {
   display: flex;
   justify-content: center;
 }
 
 .result-image img {
   width: 250px;
-  height: 170px;
- 
+  height: 140px;
 }
 
-.result-text{
+.result-text {
   text-align: center;
   width: 80%;
   margin: 10% auto;
   font-family: "ghanachoco";
   font-size: 1.6rem;
-
 }
 
-.result-contents{
+.result-contents {
   width: 80%;
   font-size: 1.6rem;
-  margin:0 auto;
+  margin: 0 auto;
   padding-top: 10%;
   padding-bottom: 10%;
   font-family: "MapoPeacefull";
-
 }
