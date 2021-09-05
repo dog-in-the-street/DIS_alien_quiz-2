@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    background-image: url("../../static/image/DIS 소개.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.text {
+
+    font-family: "DungGeunMo";
+    font-size: medium;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+

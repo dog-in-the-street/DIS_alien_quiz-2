@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/rock.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}" />
 </head>
 <body>
     <div class="loading-screen">
@@ -16,37 +16,10 @@
         <div class="spinner-original"></div>
         <div>로딩중입니다..!</div>
     </div>
+
+    <div class
     <div class="result-page">
-    {% if total_score < 20 %}
-        {{total_score}}
-<div class="rock">돌!</div>
-        
-        
-    {% elif total_score < 40 %}
-        {{total_score}}
-        <div class="raccoon">
-            <img src="">
-            <h1>외계인이 키우던 솜사탕 먹는 라쿤!<h2>
-            <!-- 여기 bar 넣기 <div>progress bar</div> -->
-    
-            
-    
-        </div>
-    {% elif total_score < 60 %}
-        {{total_score}}
-        <div class="mars">화성인!</div>
-    {% elif total_score < 80 %}
-        {{total_score}}
-        <div class="babyalien">응애 나 애기 외계인!</div>
-    {% elif total_score < 100 %}
-        {{total_score}}
-        <div class="boss">외계인협회장!</div>
-    {% elif total_score < 1500 %}
-        <div class="wizard">대마법사!</div>
-    {% elif total_score < 500000%}
-        <div class="dis">저잣거리를 촐랑촐랑 떠돌아다니는 개</div>
-    {% endif %}
-    {{ total_score }}
+    <h1>돌!</h1>
 
     <!-- progressbar -->
     <div class="conatiner">
@@ -92,6 +65,10 @@
             <!-- <img src="" alt=""> -->
         </a>
     </div>
+
+    <!-- <a href="https://google.com">
+        <img class="img-concert" src="images/concert.jpg"/>
+    </a> -->
 
     <!-- 만든사람들 -->
     <div id="DIS">

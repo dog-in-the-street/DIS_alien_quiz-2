@@ -10,8 +10,7 @@ def index(request):
 def quiz(request):
     questions = Question.objects.all() # 모델 전체를 가져옴.
     global total_score # 점수 총합
-
-    
+        
     return render(request, 'quiz.html', {"questions":questions, "total_score":total_score})
 
 # def checkbox_submit(request):
@@ -87,3 +86,6 @@ def result(request):
 #     global total_score
 
 #     return render(request,'result.html', {"total_score":total_score})
+
+def DIS(request):
+    return render(request,'DIS.html')
