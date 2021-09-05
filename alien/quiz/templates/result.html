@@ -9,12 +9,14 @@
     <title>Document</title>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}" />
+    {% block head %}{% endblock head %}
 </head>
 <body>
     <div class="loading-screen">
         
+        
+
         <div class="spinner-original"></div>
-        <div>로딩중입니다..!</div>
     </div>
     <div class="result-page">
         {% block content %}
@@ -22,13 +24,6 @@
 
 
 
-    <div class="conatiner">
-        <div class="prog">
-            <div class="progs" id="progressing"></div>
-        </div>
-        <button onClick="moveBtn()">외계지수 확인하기</button>
-        <br>
-    </div>
 
     <button><a href="{% url 'index' %}">다시하기!</a></button>
   
