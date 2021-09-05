@@ -30,4 +30,59 @@
             하지만 한 개 정도는 맞는 게 있을 거예요.. (총총)  
         </div>
     </div>
+    
     {% endblock content%}
+    {% block script %}
+    <script>
+        // 클립보드로 url 복사
+        function CopyUrlToClipboard() {
+            var obShareUrl = document.getElementById("ShareUrl");
+            obShareUrl.value = window.document.location.href;  // 현재 URL을 복사하는 경우.
+            // obShareUrl.value = 'http://www.abc.com/';  // 특정 url을 복사하는 경우.
+            
+    
+            obShareUrl.select();  // 해당 값이 선택되도록 select() 
+            document.execCommand("copy"); // 클립보드에 복사
+            obShareUrl.blur(); 
+                
+            alert("URL이 클립보드에 복사되었습니다"); // 버튼 눌렀을 때 뜨는 alert 메시지.
+        }
+        var obShareUrl = document.getElementById("ShareUrl");
+        obShareUrl.value = window.document.location.href;  // 현재 URL을 복사하는 경우.
+        // obShareUrl.value = 'http://www.abc.com/'; // 특정 url을 복사해야 하는 경우.
+    
+        // 카카오톡 공유
+        Kakao.init('58772ed23236c0a883c9ca150f9b5194'); // 카카오 디벨로퍼에서 앱 등록.
+        function sendLinkKakao(){
+            Kakao.Link.sendDefault({
+            objectType: 'feed',
+            content: {
+                // 카톡 메시지에서 제목
+                title: '외계인이 키우던 솜사탕 먹는 라쿤', 
+                // 설명
+                description: '축하합니다! 당신은 가장 이름이 긴 "외계인이 키우던, "솜사탕 먹는", "라쿤"입니다.', 
+                // 카톡 메시지에 뜨는 이미지. (결과 이미지)
+                imageUrl: 'https://media1.giphy.com/media/u2IX845YB64W4/giphy.gif?cid=790b7611d7dbc7376b6e4af3b2a5479c70dd7516c863a5d4&rid=giphy.gif&ct=g', 
+                // mibileWebUrl, webUrl, buttons에 있는 link 모두 동일한 url 넣기.
+                link: {
+                mobileWebUrl: '{{ request.build_absolute_uri }}', // 현재 url 
+                webUrl: '{{ request.build_absolute_uri }}'
+                }
+                // 특정 url로 연결되도록 하려면 mobileWebUrl: 'url', 과 같이 url을 직접 입력해주면 됨.
+            },
+            buttons: [       
+                {
+                    title: '링크 열기',
+                    link: {
+                        mobileWebUrl: '{{ request.build_absolute_uri }}',
+                        webUrl: '{{ request.build_absolute_uri }}'
+                    }
+                }
+            ]
+            }); 
+        }
+    
+    
+    </script>
+    
+    {% endblock script %}
