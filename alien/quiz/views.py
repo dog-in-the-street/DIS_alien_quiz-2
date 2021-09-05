@@ -26,7 +26,36 @@ def result(request):
         selected = request.POST.getlist('selected[]')
         selected = [ int(i) for i in selected ]
         total_score = sum(selected)
-    return render(request,'result.html', {"total_score":total_score})
+
+
+    # 돌 유형 0 ~ 20
+    if total_score >= 0 and total_score < 20:
+        return render(request,'rock.html')
+    # 라쿤 유형 21 ~ 40
+    elif total_score >= 21 and total_score < 40:
+        return render(request,'raccoon.html')
+    # 화성인 유형 41 ~ 60
+    elif total_score >= 41 and total_score < 60:
+        return render(request,'martian.html')
+    # 애기 외계인 유형 61 ~ 80
+    elif total_score >= 61 and total_score < 80:
+        return render(request,'baby.html')
+    # 외계인 협회장 유형 81 ~ 100
+    elif total_score >= 81 and total_score < 100:
+        return render(request,'alien_president.html')
+    # 대마법사 유형 <2000
+    elif total_score >= 100 and total_score < 2000:
+        return render(request, 'wizard.html')
+    # 저잣거리를 떠도는 개 유형 <50000
+    elif total_score >= 2000 and total_score < 50000:
+        return render(request, 'dog.html')
+
+
+    # return render(request,'result.html', {"total_score":total_score})
+
+
+
+
 
 
 # 테스트 다시하기
