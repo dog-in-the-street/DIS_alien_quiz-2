@@ -1,3 +1,41 @@
+{% extends 'result.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/baby.css'%}" />
+{% endblock head %}
+
+{% block content%}
+<div class="result-container">
+    <div class="result-title">
+        응애 나 애기 외계인
+    </div>
+    <div class="result-image"> 
+        <img src="../../static/image/애기 외계인.png"/>
+    </div>
+    
+    
+    <div class="result-text">
+        축하합니다! 
+당신은 갓 태어난 외계인! 
+외계인 중에서는 
+제일 덜 외계인스러운 외계인이군요.
+    </div>
+    <div class="result-contents">
+    애기 외계인인 당신은 어딘가 극단적인 면이 있습니다. 
+    하나에 빠지면 무엇이든 온 힘을 쏟죠! 
+    누구보다 열정적인 에너지를 가지고 있습니다. <br />
+
+    예측 불가능한 매력을 당신! 
+    어디로 튈지 모르는 스파클링 같은 당신! 
+    그래서 사람들을 행복하게 만드는 에너지를 지닌 당신! 
+    당신은 아주 매력적인 사람입니다.
+    [저또개]는 당신을 응원합니다. <br />
+
+    혹시 예측이 틀렸나요? 틀렸다면 죄송합니다. 
+    하지만 한 개 정도는 맞는 게 있을 거예요.. (총총)
+    </div>
+</div>
+{% endblock content%}
 {% block script %}
 <script>
     // 클립보드로 url 복사
