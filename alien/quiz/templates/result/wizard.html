@@ -1,6 +1,32 @@
-{% extends 'result.html' %}
-{% load static %}
-{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/wizard.css' %}">
+   <title>Document</title>
+</head>
+<body>
+   {% extends 'result.html' %}
+   {% load static %}
+   {% block content%}
+
+   <div>
+      <div class="wizard-title">
+         아앗 연애를 한 번도 못해본 당신..<br>
+         안타깝게도 대마법사입니다!
+      </div>
+
+      <div class="wizard-content">
+         하지만 연애 횟수는 중요하지 않죠!<br>
+         이 테스트가 당신에게 행운을 주어<br>
+         당신은 곧 연애를 하게 될 것입니다 
+      </div>
+   
+   </div>
+   {% endblock content%}
+   {% block content%}
 <div>
     <div>
        대마법사
@@ -67,3 +93,7 @@
 </script>
 
 {% endblock script %}
+</body>
+</html>
+
+
