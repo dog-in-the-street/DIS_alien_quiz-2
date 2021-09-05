@@ -1,3 +1,6 @@
+{% extends 'result.html' %}
+{% load static %}
+{% block content%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +8,19 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" type="text/css" href="{% static 'css/wizard.css' %}">
-   <title>Document</title>
+   <title>대마법사</title>
 </head>
 <body>
-   {% extends 'result.html' %}
-   {% load static %}
-   {% block content%}
-
-   <div>
+   <div class="wizard-container">
+      
       <div class="wizard-title">
          아앗 연애를 한 번도 못해본 당신..<br>
          안타깝게도 대마법사입니다!
       </div>
+
+      <div class="wizard-image">
+         <img src="../static/image/대마법사.png"  title="대마법사" alt="대마법사" />
+     </div>
 
       <div class="wizard-content">
          하지만 연애 횟수는 중요하지 않죠!<br>
@@ -28,5 +32,6 @@
    {% endblock content%}
 </body>
 </html>
+
 
 

@@ -1,0 +1,37 @@
+{% extends 'result.html' %}
+{% load static %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/dog.css' %}">
+   <title>대마법사</title>
+</head>
+<body>
+   <div class="dog-container">
+      
+      <div class="dog-title">
+         집 밖을 절대 나오지 않는 당신!<br>
+         당신은 설마..<br>
+         전생에 조선 저잣거리에서 떠도는 개?!?!?!
+
+      </div>
+
+      <div class="dog-image">
+         <img src="../static/image/개.png"  title="대마법사" alt="대마법사" />
+     </div>
+
+      <div class="dog-content">
+         전생에 도대체 얼마나 떠돌아 다니신 것이죠?<br>
+         전생에 에너지를 모두 소진해서<br>
+         당신은 집순(돌)이가 되었습니다. <br>
+      </div>
+   
+   </div>
+   {% endblock content%}
+</body>
+</html>
+
