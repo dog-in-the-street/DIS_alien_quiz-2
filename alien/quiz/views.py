@@ -7,6 +7,7 @@ total_score = 0
 def index(request):
     return render(request, 'index.html')
 
+
 def quiz(request):
     questions = Question.objects.all() # 모델 전체를 가져옴.
     global total_score # 점수 총합
@@ -19,39 +20,65 @@ def quiz(request):
 
 #     return render(reques)
 
+# 결과 페이지 html render
+def rock(request):
+    return render(request, 'result/rock.html')
+
+
+def raccoon(request):
+    return render(request, 'result/raccoon.html')
+
+
+def martian(request):
+    return render(request, 'result/martian.html')
+
+
+def baby(request):
+    return render(request, 'result/baby.html')
+
+
+def president(request):
+    return render(request, 'result/president.html')
+
+
+def wizard(request):
+    return render(request, 'result/wizard.html')
+
+
+def dog(request):
+    return render(request, 'result/dog.html')
+
 
 def result(request):
+    # 점수 산출
     global total_score
     if request.method == "POST":
         selected = request.POST.getlist('selected[]')
         selected = [ int(i) for i in selected ]
         total_score = sum(selected)
-
-
     # 돌 유형 0 ~ 20
     if total_score >= 0 and total_score < 20:
-        return render(request,'rock.html')
+        return redirect('rock')
     # 라쿤 유형 21 ~ 40
     elif total_score >= 21 and total_score < 40:
-        return render(request,'raccoon.html')
+        return redirect('raccoon')
     # 화성인 유형 41 ~ 60
     elif total_score >= 41 and total_score < 60:
-        return render(request,'martian.html')
+        return redirect('martian')
     # 애기 외계인 유형 61 ~ 80
     elif total_score >= 61 and total_score < 80:
-        return render(request,'baby.html')
+        return redirect('baby')
     # 외계인 협회장 유형 81 ~ 100
     elif total_score >= 81 and total_score < 100:
-        return render(request,'alien_president.html')
+        return redirect('president')
     # 대마법사 유형 <2000
     elif total_score >= 100 and total_score < 2000:
-        return render(request, 'wizard.html')
+        return redirect('wizard')
     # 저잣거리를 떠도는 개 유형 <50000
     elif total_score >= 2000 and total_score < 50000:
-        return render(request, 'dog.html')
+        return redirect('dog')
 
 
-    # return render(request,'result.html', {"total_score":total_score})
 
 
 
