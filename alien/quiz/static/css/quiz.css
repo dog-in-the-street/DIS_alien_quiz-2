@@ -12,6 +12,27 @@ body {
   overflow-y: hidden;
 }
 
+body{
+  background-color: black;
+}
+
+/* font-family */
+@font-face {
+  font-family: 'ghanachoco';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MapoPeacefull';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* input style-none */
+
 input[type="checkbox"] {
   border-radius: 0;
   -webkit-appearance: none;
@@ -25,8 +46,89 @@ input[type="submit"] {
   padding: 0;
 }
 
+/* .quiz-form{
+  max-width: 320px;
+  background-color: #FEEBB6;
+  margin: 0 auto;
+} */
+
+/* phone,tablet */
 .quiz-contents {
-  font-size: 1.6rem;
+
   min-width: 320px;
+  width: 55%;
   height: 100vh;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #FEEBB6;
+  align-items: center;
+}
+
+.question-title{
+width: 80%;
+margin: 0 auto;
+text-align: center;
+font-size: 2.4rem;
+padding: 20% 0 10% 0;
+color: black;
+font-family: 'ghanachoco';
+}
+
+
+label{
+  width:70%;
+  font-size: 1.6rem;
+  height: 35px;
+  background-color: green;
+  padding: 5%;
+  border-radius: 8px;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'MapoPeacefull';
+}
+
+/* desktop */
+@media (min-width:1025px){
+  .quiz-contents {
+
+    min-width: 320px;
+    width: 40%;
+    height: 100vh;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #FEEBB6;
+  }
+.question-title{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.4rem;
+  padding: 15% 0 5% 0;
+  color: black;
+  font-family: 'ghanachoco';
+  }
+
+  label{
+    width:60%;
+    font-size: 2rem;
+    height: 25px;
+    background-color: green;
+    padding: 5%;
+    border-radius: 8px;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'MapoPeacefull';
+  }
+  
+  
 }
