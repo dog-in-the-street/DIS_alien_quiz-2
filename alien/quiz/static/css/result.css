@@ -56,18 +56,3 @@
   line-height: 25px;
 }
 
-/* result content */
-
-/* .rock {
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  
-}   */
-
-.result-container {
-  /* max-width: ; */
-  display: none;
-  width: 80%;
-}
