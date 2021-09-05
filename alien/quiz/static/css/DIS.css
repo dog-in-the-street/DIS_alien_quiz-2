@@ -5,10 +5,21 @@
     font-style: normal;
 }
 
-
 body {
     height: 100vh;
-    background-image: url("DIS 소개.gif");
+    background-image: url("../../static/image/DIS 소개.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
+
+.text {
+
+    font-family: "DungGeunMo";
+    font-size: medium;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+
