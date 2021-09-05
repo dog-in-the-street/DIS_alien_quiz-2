@@ -1,6 +1,24 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+}
+
+/* font-family */
+@font-face {
+  font-family: "ghanachoco";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MapoPeacefull";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* loading-UI */
@@ -56,3 +74,140 @@
   line-height: 25px;
 }
 
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.reset-btn {
+  max-width: 320px;
+  width: 80%;
+  margin: 10% auto;
+  height: 40px;
+  border: none;
+  background: #575659;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-btn a {
+  font-family: "MapoPeacefull";
+  color: white;
+  font-size: 1.6rem;
+}
+
+.url-btn {
+  font-family: "MapoPeacefull";
+  font-size: 1.6rem;
+  max-width: 320px;
+  width: 80%;
+  margin: 10% auto;
+  height: 40px;
+  border: none;
+  background: #ffffff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.kakao-btn {
+  font-family: "MapoPeacefull";
+  font-size: 1.6rem;
+  max-width: 320px;
+  width: 80%;
+  margin: 10% auto;
+  height: 40px;
+  border: none;
+  background: #fee500;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.dis-btn {
+  font-family: "MapoPeacefull";
+  font-size: 1.6rem;
+  max-width: 320px;
+  width: 80%;
+  margin: 10% auto;
+  height: 40px;
+  border: none;
+  background: #fee500;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  background: #9cc4f0;
+}
+
+@media (min-width: 1025px) {
+  .reset-btn {
+    font-family: "MapoPeacefull";
+    font-size: 1.6rem;
+    max-width: 320px;
+    width: 80%;
+    margin: 3% auto;
+    height: 40px;
+    border: none;
+    background: #575659;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .url-btn {
+    font-family: "MapoPeacefull";
+    font-size: 1.6rem;
+    max-width: 320px;
+    width: 80%;
+    margin: 3% auto;
+    height: 40px;
+    border: none;
+    background: #ffffff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .kakao-btn {
+    font-family: "MapoPeacefull";
+    font-size: 1.6rem;
+    max-width: 320px;
+    width: 80%;
+    margin: 3% auto;
+    height: 40px;
+    border: none;
+    background: #fee500;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .dis-btn {
+    font-family: "MapoPeacefull";
+    font-size: 1.6rem;
+    max-width: 320px;
+    width: 80%;
+    margin: 3% auto;
+    height: 40px;
+    border: none;
+    background: #9cc4f0;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+}

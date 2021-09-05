@@ -16,39 +16,38 @@
         
         
 
-        <div class="spinner-original"></div>
+    <div class="spinner-original"></div>
     </div>
     <div class="result-page">
         {% block content %}
         {% endblock content %}
 
 
+    <div class="btn-container">
 
-
-    <button><a href="{% url 'index' %}">다시하기!</a></button>
-  
+        <button class="reset-btn"><a href="{% url 'index' %}">다시하기!</a></button>
+    
+    
+        
+            <button OnClick="javascript:CopyUrlToClipboard()" class="url-btn">🔗 URL 복사</button>
+            <!-- <img src="" alt="" OnClick="javascript:CopyUrlToClipboard()"> -->
  
-    <!-- url 복사 버튼. 현재 url를 복사되게 만들어주기. -->
-    <input type="text" id = "ShareUrl">
-    <span class="url-btn">
-        <button OnClick="javascript:CopyUrlToClipboard()">URL 복사</button>
-        <!-- <img src="" alt="" OnClick="javascript:CopyUrlToClipboard()"> -->
-    </span>
 
 
 
-    <!-- 카카오톡 공유 버튼 -->
-    <div id="kakaotalk-share">
-        <a href="javascript:sendLinkKakao()" id="kakao-link-btn" title="카카오톡으로 공유">
-            <button>카카오톡 공유하기</button>
-            <!-- <img src="" alt=""> -->
-        </a>
-    </div>
+        <!-- 카카오톡 공유 버튼 -->
+        <div id="kakaotalk-share">
+            <a href="javascript:sendLinkKakao()" id="kakao-link-btn" title="카카오톡으로 공유">
+                <button class="kakao-btn">카카오톡 공유하기</button>
+                <!-- <img src="" alt=""> -->
+            </a>
+        </div>
 
-    <!-- 만든사람들 -->
-    <div id="DIS">
-        <a href="{% url 'DIS' %}" id="DIS" title="만든사람들">
-            <button>만든사람들</button>
+        <!-- 만든사람들 -->
+        <div id="DIS">
+            <a href="{% url 'DIS' %}" id="DIS" title="만든사람들">
+                <button class="dis-btn">만든 사람들</button>
+        </div>
     </div>
     {% block script %}
     {% endblock script %}
