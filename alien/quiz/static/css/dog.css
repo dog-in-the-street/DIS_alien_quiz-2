@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* loading-UI */
+  .result-page {
+    display: none;
+  }
+  
+  @keyframes spinner-original {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* font-family */
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'MapoPeacefull';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .spinner-original:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-top-color: #333;
+    animation: spinner-original 0.6s linear infinite;
+  }
+  
+  /* progress bar */
+  
+
+  
+  .prog {
+    height: 25px;
+    width: 500px;
+    background: #c4c4c4;
+    border-radius: 7px;
+  }
+  .progs {
+    border-radius: 7px;
+    width: 10%;
+    height: 25px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+  }
+
+
+  body {
+    height: 100vh;
+    background-image: url("../../static/image/개 화면.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dog-container{
+    text-align: center;
+    padding: 10%;
+}
+  .dog-title{
+    font-size: 1.9rem;
+    font-family: 'ghanachoco';
+    color: brown;
+    padding: 3%;
+  }
+  
+  .dog-image{
+    
+    width: 100%;
+    height: max-content;
+
+  }
+
+  .dog-content{
+    font-size: 1.3rem;
+    font-family: 'MapoPeacefull';
+    color: brown;
+    padding: 3%;
+  }
+
+

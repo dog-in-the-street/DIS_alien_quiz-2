@@ -47,13 +47,7 @@
   
   /* progress bar */
   
-  .conatiner {
-    height: 25px;
-    margin: 200px 50px;
-    background-color: rgb(255, 254, 254);
-    position: relative;
-    border-radius: 7px;
-  }
+
   
   .prog {
     height: 25px;
@@ -70,15 +64,81 @@
     text-align: center;
     line-height: 25px;
   }
-  
 
 
+  body {
+    height: 100vh;
+    background-image: url("../../static/image/대마법사 화면.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wizard-container{
+    text-align: center;
+    padding: 10%;
+}
   .wizard-title{
+    font-size: 1.9rem;
     font-family: 'ghanachoco';
     color: #FFF9BE;
+    padding: 3%;
   }
   
+  .wizard-image{
+    
+    width: 100%;
+    height: max-content;
+
+  }
+
   .wizard-content{
+    font-size: 1.3rem;
     font-family: 'MapoPeacefull';
     color: #FFF9BE;
+    padding: 3%;
   }
+
+
+  .re-btn {
+    max-width: 320px;
+    width: 80%;
+    margin: 10% auto;
+    height: 40px;
+    border: none;
+    background: pink;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+
+  .url-btn {
+    max-width: 320px;
+    width: 80%;
+    margin: 10% auto;
+    height: 40px;
+    border: none;
+    background: #ffffff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .kakao-link-btn {
+    max-width: 320px;
+    width: 80%;
+    margin: 10% auto;
+    height: 40px;
+    border: none;
+    background: yellow;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+
