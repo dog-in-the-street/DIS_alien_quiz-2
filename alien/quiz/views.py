@@ -44,12 +44,12 @@ def result(request):
     # 외계인 협회장 유형 81 ~ 100
     elif total_score >= 81 and total_score < 100:
         return render(request,'alien_president.html')
-    # 대마법사 유형
-    
-    #   return render(request, 'wizard.html')
-    # 저잣거리를 떠도는 개 유형 
-
-        # return render(request, 'dog.html')
+    # 대마법사 유형 <2000
+    elif total_score >= 100 and total_score < 2000:
+        return render(request, 'wizard.html')
+    # 저잣거리를 떠도는 개 유형 <50000
+    elif total_score >= 2000 and total_score < 50000:
+        return render(request, 'dog.html')
 
 
     # return render(request,'result.html', {"total_score":total_score})
