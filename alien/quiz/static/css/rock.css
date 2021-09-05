@@ -73,3 +73,44 @@ body {
   font-family: "MapoPeacefull";
 
 }
+/* progress bar */
+  
+.conatiner {
+  width: 80%;
+  height: 25px;
+  margin: 25% auto;
+  position: relative;
+  border-radius: 7px;
+  margin-top: 10%;
+}
+
+.prog {
+  height: 25px;
+  width: 100%;
+  background: white;
+  border-radius: 7px;
+
+}
+.progs{
+  border-radius: 7px;
+  width: 10%;
+  height: 25px;
+  background: black;
+  color:#fff;
+  text-align: center;
+  line-height: 25px;
+}
+
+.progress-btn{
+  font-family: "MapoPeacefull";
+  width: 60%;
+  font-size: 1.6rem;
+  height: 35px;
+  color: white;
+  background-color: black;
+  margin: 3% auto;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}

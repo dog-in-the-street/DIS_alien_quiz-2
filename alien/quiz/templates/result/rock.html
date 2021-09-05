@@ -12,7 +12,33 @@
     <div class="result-image"> 
         <img src="../../static/image/돌.png"/>
     </div>
+    <!-- progressbar -->
+<div class="conatiner">
+    <div class="prog">
+        <div class="progs" id="progressing"></div>
+    </div>
+    <button onClick="moveBtn()" class="progress-btn">외계지수 확인하기</button>
+    <br>
+</div>
+
+<script>
+
     
+        function moveBtn(){
+            var ele=document.getElementById('progressing');
+            var width = 5;
+            var id =setInterval(frame, 50);
+            function frame(){
+                if(width>=15){
+                    clearInterval(id);
+                }else{
+                    width ++;
+                    ele.style.width=width+"%";
+                    ele.innerHTML=width+"%";
+                }
+            }
+        }
+</script>
     
     <div class="result-text">
         축하합니다. 당신은 [돌]입니다. 
