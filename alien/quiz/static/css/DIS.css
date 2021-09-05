@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 @font-face {
     font-family: 'DungGeunMo';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -5,21 +12,83 @@
     font-style: normal;
 }
 
-body {
+/* body {
     height: 100vh;
     background-image: url("../../static/image/DIS 소개.gif");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 320px 
+    max-width
+    
+} */
+
+body {
+    background-color: #3c3f3f;
+}
+
+
+
+#gif{
+    position: relative;
+    width:100%; 
+    text-align:center; 
+    margin:20px auto;
+    left: 3%;
+    top: 5%;
+}
+
+#gif img{
+    width:100%; 
+    height:auto
     
 }
 
-.text {
-
-    font-family: "DungGeunMo";
-    font-size: medium;
+/* #gif img{
+    display: flex;
     text-align: center;
-    margin-top: 100px;
+    width: 425px;
+    height: 614px;
+    min-width: 425px;
+} */
+
+
+/* 아래 코드들은 425px 이상에서부터 적용되라 */
+@media (min-width:925px) {
+    .text {
+        text-align: center;
+        color: black;
+        top: 20%;
+    }
+    .title {
+        color: black;
+        top: 20%;
+        position: relative;
+    }
+        
 }
 
+/* @media (min-width: 768px) {
+  
+} */
 
+
+
+.text { 
+    color: blanchedalmond;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    right: 5%;
+    font-family: "DungGeunMo";
+    font-size: x-large;
+    text-align: center;
+    /* margin-top: 300px; */
+}
+
+.text a {
+    
+    padding-top: 60px;
+    padding-left: 10px;
+    text-decoration-line: none;
+    color: black;
+}
 

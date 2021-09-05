@@ -10,19 +10,23 @@
     <title>만든사람들</title>
 </head>
 <body>
-<audio autoplay> <source src="../../static/image/helloaudio.mp3" type="audio/mp3"> </audio>
-<!-- <div class="gif">
-    <img src="static/image/DIS 소개.gif">
-</div> -->
-<div class="text">
-    <h1>We are,,,"Dog in the street!"</h1>
+<audio autoplay> 
+    <source src="../../static/image/helloaudio.mp3" type="audio/mp3"> 
+</audio>
+<div class="image-container">
+<div id="gif">
+    <img src="static/image/DIS 소개.gif" alt="개발자 소개 움짤" title="개발자 이미지">
+</div>
 
-    <a href="">GITHUB</a>
-    <a href="">NOTION</a>
+<div class="text">
+    <div class="title">We are,,,"Dog in the street!"</div>
+
+    <a href="https://github.com/dog-in-the-street">GITHUB</a>
+    <a href="https://www.notion.so/c2de0d8736024bbca48a2d069fe9aeaa">NOTION</a>
 
     <a href="{% url 'result' %}" class="exit">나가기</a>
 </div>
-    
+</div>
 </body>
 </html>
     
