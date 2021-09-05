@@ -19,25 +19,60 @@
     <div class="result-page">
     {% if total_score < 20 %}
         {{total_score}}
-        돌!
+<div class="rock">돌!</div>
+        
+        
     {% elif total_score < 40 %}
         {{total_score}}
-        2등급!
+        <div class="raccoon">
+            <img src="">
+            <h1>외계인이 키우던 솜사탕 먹는 라쿤!<h2>
+            <!-- 여기 bar 넣기 <div>progress bar</div> -->
+        
+        </div>
     {% elif total_score < 60 %}
         {{total_score}}
-        3등급!
+        <div class="mars">화성인!</div>
     {% elif total_score < 80 %}
         {{total_score}}
-        4등급
+        <div class="babyalien">응애 나 애기 외계인!</div>
     {% elif total_score < 100 %}
         {{total_score}}
-        5등급
+        <div class="boss">외계인협회장!</div>
     {% elif total_score < 1500 %}
-        대마법사
+        <div class="wizard">대마법사!</div>
     {% elif total_score < 500000%}
-        저잣거리를 촐랑촐랑 떠돌아다니는 개
+        <div class="dis">저잣거리를 촐랑촐랑 떠돌아다니는 개</div>
     {% endif %}
     {{ total_score }}
+
+    <!-- progressbar -->
+    <div class="conatiner">
+        <div class="prog">
+            <div class="progs" id="progressing"></div>
+        </div>
+        <button onClick="moveBtn()">외계지수 확인하기</button>
+        <br>
+    </div>
+
+    <script>
+
+        
+            function moveBtn(){
+                var ele=document.getElementById('progressing');
+                var width = 5;
+                var id =setInterval(frame, 50);
+                function frame(){
+                    if(width>=15){
+                        clearInterval(id);
+                    }else{
+                        width ++;
+                        ele.style.width=width+"%";
+                        ele.innerHTML=width+"%";
+                    }
+                }
+            }
+    </script>
 
     <button><a href="{% url 'index' %}">다시하기!</a></button>
     <!-- url 복사 버튼. 현재 url를 복사되게 만들어주기. -->
@@ -56,7 +91,11 @@
         </a>
     </div>
 
-</div>    
+    <!-- 만든사람들 -->
+    <div id="DIS">
+        <a href="{% url 'DIS' %}" id="DIS" title="만든사람들">
+            <button>만든사람들</button>
+    </div>
     
 
 
@@ -111,7 +150,9 @@
             }); 
         }
 
+
     </script>
     <script src="{% static 'js/loading.js' %}"></script>
+    <script src="{% static 'js/result.js' %}"></script>
 </body>
 </html>

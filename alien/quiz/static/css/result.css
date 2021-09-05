@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .result-page{
     display: none;
@@ -22,7 +26,40 @@
     border-top-color: #333;
     animation: spinner-original .6s linear infinite;
   }
+
+.rock {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
   
+}  
 
 
+/* progress bar */
+
+.conatiner {
+  height: 25px;
+  margin: 200px 50px;
+  background-color: rgb(255, 254, 254);
+  position: relative;
+  border-radius: 7px;
+}
+
+.prog {
+  height: 25px;
+  width: 500px;
+  background: #C4C4C4;
+  border-radius: 7px;
+
+}
+.progs{
+  border-radius: 7px;
+  width: 10%;
+  height: 25px;
+  background: black;
+  color:#fff;
+  text-align: center;
+  line-height: 25px;
+}
 
