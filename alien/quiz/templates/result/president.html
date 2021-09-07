@@ -79,36 +79,7 @@
     obShareUrl.value = window.document.location.href;  // 현재 URL을 복사하는 경우.
     // obShareUrl.value = 'http://www.abc.com/'; // 특정 url을 복사해야 하는 경우.
 
-    // 카카오톡 공유
-    Kakao.init('58772ed23236c0a883c9ca150f9b5194'); // 카카오 디벨로퍼에서 앱 등록.
-    function sendLinkKakao(){
-        Kakao.Link.sendDefault({
-        objectType: 'feed',
-        content: {
-            // 카톡 메시지에서 제목
-            title: '외계인 협회장', 
-            // 설명
-            description: '축하합니다! 당신은 외계인 중에서도 가장 높은 레벨인 외계인인권협회장입니다. 전세계에 3.7% 밖에 없는 레벨이죠!', 
-            // 카톡 메시지에 뜨는 이미지. (결과 이미지)
-            imageUrl: 'quiz/static/image/외계인 협회장.png', 
-            // mibileWebUrl, webUrl, buttons에 있는 link 모두 동일한 url 넣기.
-            link: {
-            mobileWebUrl: '{{ request.build_absolute_uri }}', // 현재 url 
-            webUrl: '{{ request.build_absolute_uri }}'
-            }
-            // 특정 url로 연결되도록 하려면 mobileWebUrl: 'url', 과 같이 url을 직접 입력해주면 됨.
-        },
-        buttons: [       
-            {
-                title: '링크 열기',
-                link: {
-                    mobileWebUrl: '{{ request.build_absolute_uri }}',
-                    webUrl: '{{ request.build_absolute_uri }}'
-                }
-            }
-        ]
-        }); 
-    }
+
 
 
 </script>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}" />
     {% block head %}{% endblock head %}
 </head>
@@ -28,20 +28,13 @@
         <button class="reset-btn"><a href="{% url 'index' %}">다시하기!</a></button>
     
     
-        
+        <input type="hidden" id = "ShareUrl" />
             <button OnClick="javascript:CopyUrlToClipboard()" class="url-btn">🔗 URL 복사</button>
             <!-- <img src="" alt="" OnClick="javascript:CopyUrlToClipboard()"> -->
  
 
 
 
-        <!-- 카카오톡 공유 버튼 -->
-        <div id="kakaotalk-share">
-            <a href="javascript:sendLinkKakao()" id="kakao-link-btn" title="카카오톡으로 공유">
-                <button class="kakao-btn">카카오톡 공유하기</button>
-                <!-- <img src="" alt=""> -->
-            </a>
-        </div>
 
         <!-- 만든사람들 -->
         <div id="DIS">

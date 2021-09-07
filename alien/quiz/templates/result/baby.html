@@ -81,37 +81,7 @@
     obShareUrl.value = window.document.location.href;  // 현재 URL을 복사하는 경우.
     // obShareUrl.value = 'http://www.abc.com/'; // 특정 url을 복사해야 하는 경우.
 
-    // 카카오톡 공유
-    Kakao.init('58772ed23236c0a883c9ca150f9b5194'); // 카카오 디벨로퍼에서 앱 등록.
-    function sendLinkKakao(){
-        Kakao.Link.sendDefault({
-        objectType: 'feed',
-        content: {
-            // 카톡 메시지에서 제목
-            title: '응애 나 애기 외계인', 
-            // 설명
-            description: '축하합니다! 당신은 갓 태어난 외계인! 외계인 중에서는 제일 덜 외계인스러운 외계인이군요.', 
-            // 카톡 메시지에 뜨는 이미지. (결과 이미지)
-            imageUrl: 'quiz/static/image/애기 외계인.png', 
-            // mibileWebUrl, webUrl, buttons에 있는 link 모두 동일한 url 넣기.
-            link: {
-            mobileWebUrl: '{{ request.build_absolute_uri }}', // 현재 url 
-            webUrl: '{{ request.build_absolute_uri }}'
-            }
-            // 특정 url로 연결되도록 하려면 mobileWebUrl: 'url', 과 같이 url을 직접 입력해주면 됨.
-        },
-        buttons: [       
-            {
-                title: '링크 열기',
-                link: {
-                    mobileWebUrl: '{{ request.build_absolute_uri }}',
-                    webUrl: '{{ request.build_absolute_uri }}'
-                }
-            }
-        ]
-        }); 
-    }
-
+ 
 
 </script>
 
