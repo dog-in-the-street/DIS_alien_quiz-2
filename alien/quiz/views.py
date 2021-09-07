@@ -57,16 +57,16 @@ def result(request):
         selected = [ int(i) for i in selected ]
         total_score = sum(selected)
     # 돌 유형 0 ~ 20
-    if total_score >= 0 and total_score < 20:
+    if total_score >= 0 and total_score < 35:
         return redirect('rock')
     # 라쿤 유형 21 ~ 40
-    elif total_score >= 21 and total_score < 40:
+    elif total_score >= 36 and total_score < 50:
         return redirect('raccoon')
     # 화성인 유형 41 ~ 60
-    elif total_score >= 41 and total_score < 60:
+    elif total_score >= 51 and total_score < 65:
         return redirect('martian')
     # 애기 외계인 유형 61 ~ 80
-    elif total_score >= 61 and total_score < 80:
+    elif total_score >= 66 and total_score < 80:
         return redirect('baby')
     # 외계인 협회장 유형 81 ~ 100
     elif total_score >= 81 and total_score < 100:
@@ -77,6 +77,8 @@ def result(request):
     # 저잣거리를 떠도는 개 유형 <50000
     elif total_score >= 2000 and total_score < 50000:
         return redirect('dog')
+
+        #35,50,65,80,100
 
 
 
