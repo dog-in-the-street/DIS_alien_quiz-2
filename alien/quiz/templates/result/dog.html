@@ -1,16 +1,13 @@
 {% extends 'result.html' %}
 {% load static %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/dog.css'%}" />
+{% endblock head %}
+
 {% block content%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="{% static 'css/dog.css' %}">
-   <title>대마법사</title>
-</head>
-<body>
+
    <div class="dog-container">
       
       <div class="dog-title">
@@ -21,7 +18,7 @@
       </div>
 
       <div class="dog-image">
-         <img src="../static/image/개.png"  title="대마법사" alt="대마법사" />
+         <img src="../static/image/개.png"  title="개" alt="개" />
      </div>
 
       <div class="dog-content">
@@ -32,6 +29,58 @@
    
    </div>
    {% endblock content%}
-</body>
-</html>
+   {% block script %}
+   <script>
+       // 클립보드로 url 복사
+       function CopyUrlToClipboard() {
+           var obShareUrl = document.getElementById("ShareUrl");
+           obShareUrl.value = window.document.location.href;  // 현재 URL을 복사하는 경우.
+           // obShareUrl.value = 'http://www.abc.com/';  // 특정 url을 복사하는 경우.
+           
+   
+           obShareUrl.select();  // 해당 값이 선택되도록 select() 
+           document.execCommand("copy"); // 클립보드에 복사
+           obShareUrl.blur(); 
+               
+           alert("URL이 클립보드에 복사되었습니다"); // 버튼 눌렀을 때 뜨는 alert 메시지.
+       }
+       var obShareUrl = document.getElementById("ShareUrl");
+       obShareUrl.value = window.document.location.href;  // 현재 URL을 복사하는 경우.
+       // obShareUrl.value = 'http://www.abc.com/'; // 특정 url을 복사해야 하는 경우.
+   
+       // 카카오톡 공유
+       Kakao.init('58772ed23236c0a883c9ca150f9b5194'); // 카카오 디벨로퍼에서 앱 등록.
+       function sendLinkKakao(){
+           Kakao.Link.sendDefault({
+           objectType: 'feed',
+           content: {
+               // 카톡 메시지에서 제목
+               title: '저잣거리를 떠도는 개', 
+               // 설명
+               description: '집 밖을 절대 나오지 않는 당신! 당신은 설마.. 전생에 조선 저잣거리에서 떠도는 개?!?!?!', 
+               // 카톡 메시지에 뜨는 이미지. (결과 이미지)
+               imageUrl: 'quiz/static/image/개.png', 
+               // mibileWebUrl, webUrl, buttons에 있는 link 모두 동일한 url 넣기.
+               link: {
+               mobileWebUrl: '{{ request.build_absolute_uri }}', // 현재 url 
+               webUrl: '{{ request.build_absolute_uri }}'
+               }
+               // 특정 url로 연결되도록 하려면 mobileWebUrl: 'url', 과 같이 url을 직접 입력해주면 됨.
+           },
+           buttons: [       
+               {
+                   title: '링크 열기',
+                   link: {
+                       mobileWebUrl: '{{ request.build_absolute_uri }}',
+                       webUrl: '{{ request.build_absolute_uri }}'
+                   }
+               }
+           ]
+           }); 
+       }
+   
+   
+   </script>
+   
+   {% endblock script %}
 
