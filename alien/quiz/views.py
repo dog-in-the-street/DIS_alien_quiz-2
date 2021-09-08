@@ -79,7 +79,10 @@ def result(request):
         return redirect('dog')
 
         #35,50,65,80,100
-
+    # 에러처리
+    else:
+        error = "정상적인 페이지 접근이 아닙니다."
+        return render(request,'result.html',{'error':error})
 
 
 

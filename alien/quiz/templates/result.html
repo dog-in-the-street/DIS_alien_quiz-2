@@ -18,6 +18,9 @@
 
     <div class="spinner-original"></div>
     </div>
+    {% if error %}
+    <div>{{error}}</div>
+    {% endif %}
     <div class="result-page">
         {% block content %}
         {% endblock content %}
