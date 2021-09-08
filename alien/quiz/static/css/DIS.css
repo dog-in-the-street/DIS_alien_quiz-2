@@ -32,13 +32,18 @@ body {
   color: white;
 }
 
+.link-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 a {
   font-size: 1.4rem;
-  display: flex;
-  flex-direction: column;
+  font-family: "DungGeunMo";
   text-decoration: none;
   color: #f6e67a;
   margin-top: 15px;
+  margin-right: 5%;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -49,10 +54,13 @@ a {
     margin-top: 40%;
   }
 
+  .link-wrapper {
+    flex-direction: column;
+  }
+
   a {
     font-size: 1.4rem;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
     text-decoration: none;
     color: #f6e67a;
     margin-top: 15px;

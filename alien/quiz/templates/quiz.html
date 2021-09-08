@@ -17,6 +17,7 @@
 
         <form action="{% url 'result' %}" method="POST" class="quiz-form">
             {% csrf_token %}
+        <!-- 1번부터 9번까지 선택하는 인풋 -->
         {% for question in questions %}
             {% if question.id < 10 %}
                 <div class="quiz-contents">
@@ -28,6 +29,7 @@
                         <label> <div class="question-choice"><input class="option" type="checkbox" name='selected[]' value="{{ question.score4 }}" />{{ question.option4 }}</div></label>
                     
                     </div>
+            <!-- 마지막 10번 질문의 인풋은 바로 누르자말자 submit 되도록 input type을 submit로 -->
             {% else %}
                 <div class="quiz-contents">
                   <div class="question-title">{{ question.question }}</div>
@@ -41,8 +43,9 @@
        {% endfor %}
     
         </form>
-        
+        <!-- jquery import -->
         <script src="https://code.jquery.com/jquery-latest.js" ></script>
+        <!-- js file import -->
         <script src="{% static 'js/quiz.js' %}"></script>
     </div>
 
