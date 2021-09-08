@@ -89,6 +89,7 @@ label {
   justify-content: center;
   align-items: center;
   font-family: "MapoPeacefull";
+  cursor: pointer;
 }
 
 /* desktop */
@@ -114,6 +115,7 @@ label {
     justify-content: center;
     align-items: center;
     font-family: "MapoPeacefull";
+    cursor: pointer;
   }
 }
 @media (min-width: 1025px) {
@@ -151,5 +153,6 @@ label {
     justify-content: center;
     align-items: center;
     font-family: "MapoPeacefull";
+    cursor: pointer;
   }
 }

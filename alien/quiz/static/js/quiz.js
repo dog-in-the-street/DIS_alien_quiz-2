@@ -1,12 +1,11 @@
 // const vheight = document.getElementsByClassName("quiz-contents");
 // const nextBtn = document.getElementById("next-btn");
 // const prevBtn = document.getElementById("prev-btn");
-
-var offset = $(".quiz-contents").offset();
-var vheight = $(".quiz-contents").height();
-
+let offset = $(".quiz-contents").offset();
+let vheight = $(".quiz-contents").height();
 $(".option").click(function () {
   offset.top += vheight;
+  console.log(vheight);
   $("body").animate({ scrollTop: offset.top }, 0);
 });
 
@@ -23,14 +22,12 @@ $(".option").click(function () {
 //   }
 // });
 
-$(".prev-btn").click(function (e) {
-  e.preventDefault();
-  offset.top -= vheight;
-  console.log(offset.top);
-  $("body").animate({ scrollTop: offset.top }, 0);
-});
-
-
+// $(".prev-btn").click(function (e) {
+//   e.preventDefault();
+//   offset.top -= vheight;
+//   console.log(offset.top);
+//   $("body").animate({ scrollTop: offset.top }, 0);
+// });
 
 // function scrollUp() {
 //   const vheight = $(".quiz-contents").height();
