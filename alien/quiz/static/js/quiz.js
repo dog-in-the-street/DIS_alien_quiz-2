@@ -2,14 +2,13 @@
 // const nextBtn = document.getElementById("next-btn");
 // const prevBtn = document.getElementById("prev-btn");
 
-let position = $(".quiz-contents").position();
+let offset = $(".quiz-contents").offset();
 
 let vheight = $(".quiz-contents").height();
 
 $(".option").click(function () {
-  position.top += vheight;
-
-  $("body").animate({ scrollTop: position.top }, 0);
+  offset.top += vheight;
+  $("body").scrollTop(offset.top);
 });
 
 // $(".result-btn").click(function () {
