@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  background: #3c3f3f;
+}
+
+.dis-container {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("../../static/image/DIS 소개.gif");
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title {
+  font-family: "DungGeunMo";
+  font-size: 1.6rem;
+  text-align: center;
+  margin-right: 3%;
+  padding-top: 7%;
+  color: white;
+}
+
+.link-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  font-size: 1.4rem;
+  font-family: "DungGeunMo";
+  text-decoration: none;
+  color: #f6e67a;
+  margin-top: 15px;
+  margin-right: 5%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .dis-container {
+    background-size: 100%;
+  }
+  .title {
+    margin-top: 40%;
+  }
+
+  .link-wrapper {
+    flex-direction: column;
+  }
+
+  a {
+    font-size: 1.4rem;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #f6e67a;
+    margin-top: 15px;
+  }
+}

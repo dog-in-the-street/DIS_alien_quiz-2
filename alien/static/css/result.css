@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+/* font-family */
+@font-face {
+  font-family: "ghanachoco";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MapoPeacefull";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* loading-UI */
+.result-page {
+  display: none;
+}
+
+@keyframes spinner-original {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-original:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #333;
+  animation: spinner-original 0.6s linear infinite;
+}
+
+/* progress bar */
+
+.conatiner {
+  height: 25px;
+  margin: 200px 50px;
+  background-color: rgb(255, 254, 254);
+  position: relative;
+  border-radius: 7px;
+}
+
+.prog {
+  height: 25px;
+  width: 500px;
+  background: #c4c4c4;
+  border-radius: 7px;
+}
+.progs {
+  border-radius: 7px;
+  width: 10%;
+  height: 25px;
+  background: black;
+  color: #fff;
+  text-align: center;
+  line-height: 25px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.reset-btn {
+  max-width: 320px;
+  width: 80%;
+  margin: 10% auto;
+  height: 40px;
+  border: none;
+  background: #575659;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-btn a {
+  font-family: "MapoPeacefull";
+  color: white;
+  font-size: 1.6rem;
+}
+
+.url-btn {
+  font-family: "MapoPeacefull";
+  font-size: 1.6rem;
+  max-width: 320px;
+  width: 80%;
+  margin: 10% auto;
+  height: 40px;
+  border: none;
+  background: #ffffff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.kakao-btn {
+  font-family: "MapoPeacefull";
+  font-size: 1.6rem;
+  max-width: 320px;
+  width: 80%;
+  margin: 10% auto;
+  height: 40px;
+  border: none;
+  background: #fee500;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.dis-btn {
+  font-family: "MapoPeacefull";
+  font-size: 1.6rem;
+  max-width: 320px;
+  width: 80%;
+  margin: 10% auto;
+  height: 40px;
+  border: none;
+  background: #fee500;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  background: #9cc4f0;
+}
+
+@media (min-width: 1025px) {
+  .reset-btn {
+    font-family: "MapoPeacefull";
+    font-size: 1.6rem;
+    max-width: 320px;
+    width: 80%;
+    margin: 3% auto;
+    height: 40px;
+    border: none;
+    background: #575659;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .url-btn {
+    font-family: "MapoPeacefull";
+    font-size: 1.6rem;
+    max-width: 320px;
+    width: 80%;
+    margin: 3% auto;
+    height: 40px;
+    border: none;
+    background: #ffffff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    cursor: pointer;
+  }
+
+  .kakao-btn {
+    font-family: "MapoPeacefull";
+    font-size: 1.6rem;
+    max-width: 320px;
+    width: 80%;
+    margin: 3% auto;
+    height: 40px;
+    border: none;
+    background: #fee500;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .dis-btn {
+    font-family: "MapoPeacefull";
+    font-size: 1.6rem;
+    max-width: 320px;
+    width: 80%;
+    margin: 3% auto;
+    height: 40px;
+    border: none;
+    background: #9cc4f0;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+}
