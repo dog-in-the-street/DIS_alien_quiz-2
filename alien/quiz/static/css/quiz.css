@@ -36,6 +36,9 @@ body {
 input[type="checkbox"] {
   border-radius: 0;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  visibility:hidden;
+
 }
 
 input[type="submit"] {
