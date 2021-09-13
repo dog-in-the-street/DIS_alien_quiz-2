@@ -46,7 +46,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "ec2-15-164-175-52.ap-northeast-2.compute.amazonaws.com",
-    '127.0.0.1' 
+    '127.0.0.1',
+    '.alien-test.site' 
 ]
 
 
