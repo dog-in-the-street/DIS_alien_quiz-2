@@ -19,7 +19,7 @@
             {% csrf_token %}
         <!-- 1번부터 9번까지 선택하는 인풋 -->
         {% for question in questions %}
-            {% if question.id < 10 %}
+            {% if question.id < 21 %}
                 <div class="quiz-contents">
                     <div class="question-title">{{ question.question }}</div>
                    
