@@ -64,22 +64,20 @@
 {% endblock content%}
 {% block script %}
 <script>
-    // 클립보드로 url 복사
-    function CopyUrlToClipboard() {
-        var obShareUrl = document.getElementById("ShareUrl");
-        obShareUrl.value = window.document.location.href;  // 현재 URL을 복사하는 경우.
-        // obShareUrl.value = 'http://www.abc.com/';  // 특정 url을 복사하는 경우.
-        
+    function CopyUrlToClipboard(){
 
-        obShareUrl.select();  // 해당 값이 선택되도록 select() 
-        document.execCommand("copy"); // 클립보드에 복사
-        obShareUrl.blur(); 
-            
-        alert("URL이 클립보드에 복사되었습니다"); // 버튼 눌렀을 때 뜨는 alert 메시지.
+        let currentUrl = window.document.location.href;
+
+        let t = document.createElement("textarea");
+        document.body.appendChild(t);
+        t.value = currentUrl;
+        t.select();
+        document.execCommand('copy');
+        document.body.removeChild(t);
+
+        alert("URL이 클립보드에 복사되었습니다");
+
     }
-    var obShareUrl = document.getElementById("ShareUrl");
-    obShareUrl.value = window.document.location.href;  // 현재 URL을 복사하는 경우.
-    // obShareUrl.value = 'http://www.abc.com/'; // 특정 url을 복사해야 하는 경우.
 
  
 
