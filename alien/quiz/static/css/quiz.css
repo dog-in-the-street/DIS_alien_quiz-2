@@ -32,13 +32,18 @@ body {
 }
 
 /* input style-none */
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  visibility: hidden;
+}
 
 input[type="checkbox"] {
   border-radius: 0;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-  visibility:hidden;
-
+  visibility: hidden;
 }
 
 input[type="submit"] {
